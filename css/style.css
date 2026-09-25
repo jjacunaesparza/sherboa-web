@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;  /* Asegura que el padding y el borde se incluyan en el ancho y alto total de los elementos */
+    margin: 0;  /* Elimina el margen por defecto de todos los elementos */
+    padding: 0;  /* Elimina el padding por defecto de todos los elementos */
+}
+
+
+/* Variables para el tema del sitio web */
+:root {
+    /* Backgrounds */
+    --bg-primary: linear-gradient(135deg, #0f172a, #1e1b4b, #164e63);  /* Color primario para el fondo */
+    --bg-header: #020617;  /* Color del header */
+    --bg-nav: #0f172a;  /* Color de la barra nav y tambien footer (coinciden en color)*/
+    --bg-active: #c4b5fd;  /* Color del boton seleccionado en el nav */
+
+    /* Texto */
+    --text-primary: #e2e8f0;
+    --text-accent: #67e8f9;
+    --text-dark: #0f172a;
+
+    /* UI */
+    --accent-color: #67e8f9;  /* Color de acento para enlaces y botones */
+    --border-accent: #67e8f9;
+
+    /* Tipografia */
+    --font-family: 'IBM Plex Mono', 'Courier New', monospace;  /* Fuente de letra para todo el documento */
+}
+
+html {
+    font-family: var(--font-family);  /* Fuente de letra para todo el documento */
+    font-size: 16px;  /* Tamaño de letra para todo el documento */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-primary);
+}
+
+header {
+    background-color: var(--bg-header);  /* Color de fondo del encabezado */
+    color: var(--text-accent);  /* Color del texto del encabezado */
+    padding: 1rem 1rem;  /* Espaciado interno del encabezado */
+    border-bottom: 0.2rem solid var(--border-accent);  /* Línea inferior del encabezado en cyan */
+    display: flex;  /* Utiliza flexbox para el diseño del encabezado */
+    align-items: center;  /* Alinea verticalmente los elementos del encabezado */
+    justify-content: flex-start;  /* Alinea los elementos del encabezado al inicio */
+    gap: 1.5rem;  /* Espacio entre los elementos del encabezado */
+    
+    .logo {
+        width: 5rem;  /* Ajusta el tamaño del logo */
+        height: auto;  /* Mantiene la proporción del logo */
+    }
+}
+
+h1 {
+    margin: 0;  /* Espacio a la izquierda del título principal */
+}
+
+h2 {
+    margin: 0rem 2rem 1rem;  /* Espacio del título secundario */
+    padding-top: 1rem;  /* Espacio superior del título secundario */
+}
+
+h3 {
+    margin: 1rem 2rem 1rem;  /* Espacio del título terciario */
+}
+
+nav {
+    border-bottom: 0.2rem solid var(--border-accent);
+}
+
+ul {
+    display: flex;  /* Utiliza flexbox para el diseño de la lista */
+    flex-wrap: wrap;  /* Permite que los elementos sean flexibles a cada dispositivo */
+    gap: 0;  /* Espacio entre los elementos de la lista */
+    list-style-type: none;  /* Elimina los bullets de la lista */
+    /*flex: 1 0 200px  Para ver luego */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-nav);  /* Color de fondo de la lista */
+}
+
+ul li {
+    font-weight: bold;
+}
+
+ul li a {
+    display: block;
+    padding: 1rem 1rem;
+    color: var(--text-accent);  /* Color del texto de los enlaces */
+    text-decoration: none;  /* Sin subrayado */
+}
+
+ul li a.active {
+    background-color: var(--bg-active);
+    color: var(--text-dark);
+}
+
+ul li a:hover:not(.active) {
+    background-color: var(--bg-active);
+    color: var(--text-dark);
+}
+
+main {
+    background: var(--bg-primary);  /* Color de fondo del contenido principal */
+    color: var(--text-primary);  /* Color del texto del contenido principal */
+}
+
+.image {
+    display: block;  /* Hace que la imagen sea un bloque */
+    max-width: 100%;  /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    margin: 1rem auto;  /* Centra la imagen horizontalmente y agrega espacio arriba y abajo */
+}
+
+.paragraph {
+    margin: 0rem 1rem;  /* Espacio alrededor de los párrafos */
+    line-height: 2.5rem;  /* Altura de línea para mejorar la legibilidad */
+    padding: 0 0 1rem;
+}
+
+footer {
+    background-color: var(--bg-nav);
+    font-style: italic;
+    text-align: center;
+    padding: 0.7rem 0;
+    color: var(--text-primary);
+}
