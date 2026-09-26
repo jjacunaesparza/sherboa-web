@@ -66,12 +66,11 @@ h1 {
 }
 
 h2 {
-    margin: 1rem 3rem 1rem;  /* Espacio del título secundario */
-    padding-top: 1rem;  /* Espacio superior del título secundario */
+    margin: 1.5rem 2rem 1rem;  /* Espacio del título secundario */
 }
 
 h3 {
-    margin: 1rem 2rem 1rem;  /* Espacio del título terciario */
+    margin: 1rem 1rem 1rem;  /* Espacio del título terciario */
 }
 
 nav {
@@ -129,9 +128,16 @@ article {
 }
 
 .paragraph {
-    margin: 0rem 1rem;  /* Espacio alrededor de los párrafos */
+    margin: 1rem 1rem;  /* Espacio alrededor de los párrafos */
     line-height: 2.5rem;  /* Altura de línea para mejorar la legibilidad */
-    padding: 0 0 1rem;
+}
+
+form {
+    padding: 1rem 1rem 1rem;
+}
+
+.campo-form {
+    margin: 2rem 0 0 1rem
 }
 
 footer {
